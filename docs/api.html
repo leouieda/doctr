@@ -5,13 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>API &#8212; Doctr 1.7.1+17.ge6057be documentation</title>
+    <title>API &#8212; Doctr 1.7.1+24.g9f8e0ec documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.7.1+17.ge6057be',
+        VERSION:     '1.7.1+24.g9f8e0ec',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -286,7 +286,7 @@ encryption key is assumed to be set in the environment variable
 
 <dl class="function">
 <dt id="doctr.travis.sync_from_log">
-<code class="descclassname">doctr.travis.</code><code class="descname">sync_from_log</code><span class="sig-paren">(</span><em>src</em>, <em>dst</em>, <em>log_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doctr/travis.html#sync_from_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#doctr.travis.sync_from_log" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">doctr.travis.</code><code class="descname">sync_from_log</code><span class="sig-paren">(</span><em>src</em>, <em>dst</em>, <em>log_file</em>, <em>exclude=()</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doctr/travis.html#sync_from_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#doctr.travis.sync_from_log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sync the files in <code class="docutils literal"><span class="pre">src</span></code> to <code class="docutils literal"><span class="pre">dst</span></code>.</p>
 <p>The files that are synced are logged to <code class="docutils literal"><span class="pre">log_file</span></code>. If <code class="docutils literal"><span class="pre">log_file</span></code>
 exists, the files in <code class="docutils literal"><span class="pre">log_file</span></code> are removed first.</p>
@@ -294,6 +294,8 @@ exists, the files in <code class="docutils literal"><span class="pre">log_file</
 <code class="docutils literal"><span class="pre">src</span></code> (even if it already existed in <code class="docutils literal"><span class="pre">dst</span></code>), and <code class="docutils literal"><span class="pre">removed</span></code> is every
 file from <code class="docutils literal"><span class="pre">log_file</span></code> that was removed from <code class="docutils literal"><span class="pre">dst</span></code> because it wasn’t in
 <code class="docutils literal"><span class="pre">src</span></code>. <code class="docutils literal"><span class="pre">added</span></code> also includes the log file.</p>
+<p><code class="docutils literal"><span class="pre">exclude</span></code> may be a list of paths from <code class="docutils literal"><span class="pre">src</span></code> that should be ignored.
+Such paths are neither added nor removed, even if they are in the logfile.</p>
 </dd></dl>
 
 </div>
